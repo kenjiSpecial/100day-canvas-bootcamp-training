@@ -1,0 +1,12 @@
+{
+  "name": "201405",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "TweenJS": "*",
+    "greensock": "~1.11.7",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {}
+}
