@@ -30,30 +30,49 @@ outputArr.push([]);
 forEach(thClonedArr, function(val){
     if(val.search(/[a-y]/) > 0){
         var count = 0;
-        /**
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log(val);
-        console.log("");
-        */
 
         var textArr = val.split(/[a-y]/);
         var firstVal;
 
         forEach(textArr, function(val){
-            //console.log(val);
             val = val.replace(/-/g, ',-');
-            // console.log(val);
 
             if(count === 0){
+                outputArr[outputArr.length - 1].push(val);
                 var ptArr = val.split(/,/);
                 firstArr = ptArr;
             }else{
                 var ptArr = val.split(/,/);
-                console.log(ptArr);
                 var hosei = ptArr.length % 2;
+                var ptTemArr = [];
+
+                for(var ii = hosei; ii < ptArr.length; ii+= 2){
+                    var ptX = parseFloat(ptArr[ii + 0]) + parseFloat(firstArr[0]);
+                    var ptY = parseFloat(ptArr[ii + 1]) + parseFloat(firstArr[1]);
+
+                    ptTemArr.push(ptX);
+                    ptTemArr.push(ptY);
+                }
+
+                firstArr = [ptArr[ptArr.length - 2], ptArr[ptArr.length - 1]];
+
+                var pointText = "";
+                var pointCnt = 0;
+
+                forEach( ptTemArr, function(val){
+
+                    if(pointCnt == 0){
+                        pointText += String(val); 
+                    }else{
+                        pointText += ','  + String(val);
+                    }
+                    
+                    pointCnt++;
+                });
+
+                outputArr[outputArr.length - 1].push(pointText);
             }
+
             
             count++; 
             
@@ -74,6 +93,14 @@ forEach(thClonedArr, function(val){
 });
 
 console.log(outputArr);
+
+var '[['
+for(var ii = 0; ii < outputArr.length; ii++){
+    var pathArr = outputArr[ii];
+    if(pathArr.length > 0){
+        for(var j = 0; j  
+    }
+}
 
 
 fs.open('./data.js', 'w', function(err, fd) {
