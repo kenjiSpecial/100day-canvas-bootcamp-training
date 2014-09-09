@@ -6,7 +6,8 @@
     "jquery": "~1.11.0",
     "TweenJS": "*",
     "greensock": "~1.11.7",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "howler.js": "~1.1.25"
   },
   "devDependencies": {}
 }

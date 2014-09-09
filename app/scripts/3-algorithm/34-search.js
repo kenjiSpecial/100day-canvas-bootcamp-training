@@ -175,6 +175,7 @@ function init(){
     circles.shuffle = shuffle;
 
     prevTime = +new Date;
+
 }
 
 function loop(){

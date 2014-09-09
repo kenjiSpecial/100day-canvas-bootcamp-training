@@ -8,3 +8,56 @@ canvas{
   width: 100%;
   height: 100%;
 }
+
+$containerWidth: 30px;
+$containerHeight: 30px;
+$playStep: $containerHeight / 16;
+
+
+#container {
+  position: absolute;
+  bottom: 30px;
+  left:  30px;
+  width: $containerWidth;
+  height: $containerHeight;
+  text-align: center;
+}
+
+#play, #stop {
+  margin-top: 15px;
+  font-size: 24px;
+  transition: text-shadow 0.2s ease;
+  cursor: pointer;
+
+}
+
+#play {
+
+  display: inline-block;
+}
+
+#button, #stop {
+  display: none;
+}
+
+#button:checked ~ {
+
+  #play {
+    display: none;
+  }
+
+  #stop {
+    display: inline-block;
+  }
+
+  #icon {
+
+    .icon-column {
+
+      .column-inner {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+

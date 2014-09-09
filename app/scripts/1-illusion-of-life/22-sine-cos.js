@@ -20,6 +20,7 @@ Point.prototype = {
     _theta : null,
 };
 
+
 Object.defineProperty(Point.prototype, 'theta', {
     get : function(){
         return this._theta;

@@ -16,6 +16,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
@@ -23,6 +24,12 @@
 
     </head>
     <body>
+        <div id="container">
+            <input id="button" type="checkbox">
+            <label id="play" for="button" class="glyphicon glyphicon-volume-up"></label>
+            <label id="stop" for="button" class="glyphicon glyphicon-volume-off"></label>
+        </div>
+
         <canvas id="c"></canvas>
 
 
@@ -32,6 +39,7 @@
         <script src="bower_components/TweenJS/lib/tweenjs-0.5.1.combined.js"></script>
         <script src="bower_components/greensock/src/uncompressed/TweenMax.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/howler.js/howler.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -46,7 +54,7 @@
         <!--</script>-->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/3-algorithm/34-search.js"></script>
+        <script src="scripts/3-algorithm/39-undefined.js"></script>
         <!-- endbuild -->
 </body>
 </html>

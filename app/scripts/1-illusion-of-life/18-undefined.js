@@ -4,12 +4,14 @@
 var width, height, prevTime;
 var canvas = document.getElementById('c');
 var ctx    = canvas.getContext('2d');
+var isSoundPlay = true;
 
 width = window.innerWidth;
 height = window.innerHeight;
 
 canvas.width  = width;
 canvas.height = height;
+
 
 // ================
 
