@@ -352,7 +352,6 @@ function loop(){
         for (var i = 0; i < circleWidthArr[j].length; i++) {
             circleWidthArr[j][i].update(duration);
             circleBotArr[j][i].update(duration);
-
         }
 
         for (var i = 0; i < circleLeftArr[j].length; i++) {

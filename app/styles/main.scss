@@ -4,6 +4,10 @@
 @import "compass/reset";
 @import "compass/css3";
 
+body{
+  background: url("../image/pt4.png");
+}
+
 canvas{
   width: 100%;
   height: 100%;
