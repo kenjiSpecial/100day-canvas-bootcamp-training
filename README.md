@@ -12,7 +12,7 @@ Hopefuly I want to create a small work every day, but sometime it takes a few da
 
 #### Referrence
 
--[http://the12principles.tumblr.com/](http://the12principles.tumblr.com/)
--[http://fyprocessing.tumblr.com/](http://fyprocessing.tumblr.com/)
--[http://centolodigiani.tumblr.com/](http://centolodigiani.tumblr.com/)
--[http://beesandbombs.tumblr.com/](http://beesandbombs.tumblr.com/)
+- [http://the12principles.tumblr.com/](http://the12principles.tumblr.com/)
+- [http://fyprocessing.tumblr.com/](http://fyprocessing.tumblr.com/)
+- [http://centolodigiani.tumblr.com/](http://centolodigiani.tumblr.com/)
+- [http://beesandbombs.tumblr.com/](http://beesandbombs.tumblr.com/)
