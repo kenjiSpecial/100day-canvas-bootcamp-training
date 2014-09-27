@@ -8,7 +8,11 @@ Hopefuly I want to create a small work every day, but sometime it takes a few da
 
 
 #### 0 - 20 simple animation referring to life of illusion.
-
-I referred to [http://the12principles.tumblr.com/](http://the12principles.tumblr.com/)
-
 #### 20 -   undefined.
+
+#### Referrence
+
+-[http://the12principles.tumblr.com/](http://the12principles.tumblr.com/)
+-[http://fyprocessing.tumblr.com/](http://fyprocessing.tumblr.com/)
+-[http://centolodigiani.tumblr.com/](http://centolodigiani.tumblr.com/)
+-[http://beesandbombs.tumblr.com/](http://beesandbombs.tumblr.com/)
