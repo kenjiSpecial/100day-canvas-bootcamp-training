@@ -3,6 +3,8 @@
 
 This is my project for create one canvas animation work until I finish 100 work.
 
+All codes for js which are for animation works are at app/script.
+
 Hopefuly I want to create a small work every day, but sometime it takes a few day to make it.
 
 
