@@ -96,7 +96,7 @@ Object.defineProperty(Floor.prototype, 'theta', {
 // ----------------
 
 var Circle = function(id, x, y){
-    _.bindAll(this, "onUp", "onMove1", "onUp1", "onMove2", "onInit");
+    _.bindAll(this, "onUp", "onMove1", "onUp1", "onMove2", "onMove3", "onInit");
 
     this.id = id;
     this.x = x;
@@ -126,13 +126,16 @@ Circle.prototype = {
     },
 
     onUp1 : function(){
-        TweenLite.to(this,.5, {theta : 0, delay: .5, ease: "Power2.easeOut"});
-        TweenLite.to(this, 1.0, {xx: 0, delay: .5, onComplete: this.onMove2});
+        TweenLite.to(this,.5, {theta : 0,  delay: .5, ease: "Power2.easeOut", onComplete: this.onMove2});
     },
 
-    onMove2 : function(){
+    onMove2 : function() {
+        TweenLite.to(this, .5, {xx: 0,  ease: "Power2.easeOut", onComplete: this.onMove3});
+    },
+
+    onMove3 : function(){
         var nextY = this.centerY + floorHeight;
-        TweenLite.to(this,1, {centerY : nextY,  ease: "Bounce.easeOut", onComplete: this.onInit});
+        TweenLite.to(this,1, {centerY : nextY, ease: "Bounce.easeOut", onComplete: this.onInit});
     },
 
     onInit : function(){
