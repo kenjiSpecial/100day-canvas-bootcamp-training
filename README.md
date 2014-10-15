@@ -10,6 +10,9 @@ Hopefuly I want to create a small work every day, but sometime it takes a few da
 
 ## Demos and Codes.
 
+### common file:
+html : [index.html](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/index.html) | scss : [main.scss](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/styles/main.scss)
+
 ### Day 1 - Day 10
 - Day1. [rect animation](http://codepen.io/kenjiSpecial/pen/phiBu) |  [ js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/1-squash.js)
 - Day2. [squash & strech](http://codepen.io/kenjiSpecial/pen/hjsdG)| [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/2-squash.js)
