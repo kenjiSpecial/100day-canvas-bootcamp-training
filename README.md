@@ -46,7 +46,15 @@ html : [index.html](https://github.com/kenjiSpecial/100day-canvas-bootcamp-train
 - Day25. [undefined](http://codepen.io/kenjiSpecial/pen/kCoEq) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/2-numbers/24-number0.js)
 - Day26. [undefined](http://codepen.io/kenjiSpecial/pen/ysChe)
 - Day27. [undefined](http://codepen.io/kenjiSpecial/pen/dwypc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/26-undefined.js)
-- Day 28. [undefined](http://codepen.io/kenjiSpecial/pen/yLFwi)
+- Day28. [undefined](http://codepen.io/kenjiSpecial/pen/yLFwi)
+- Day29. [Combination](http://codepen.io/kenjiSpecial/pen/qsipv) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/28-02-combination.js)
+- Day30. [boid animation](http://codepen.io/kenjiSpecial/pen/efgzI) | js code
+
+### Day 31 - Day 40
+- Day31. [Move Mouse](http://codepen.io/kenjiSpecial/pen/AJxDc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/30-mouse-boid.js)
+- Day32. [Colorful boids.](http://codepen.io/kenjiSpecial/pen/DerBc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/32-boid-collection.js)
+- Day33. [undefined](http://codepen.io/kenjiSpecial/pen/atAoE) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/3-algorithm/35-undefined.js)
+
 
 #### Referrence
 
