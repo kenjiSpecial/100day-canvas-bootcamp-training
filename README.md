@@ -42,7 +42,11 @@ html : [index.html](https://github.com/kenjiSpecial/100day-canvas-bootcamp-train
 - Day21. [undefined](http://codepen.io/kenjiSpecial/pen/dkLho) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/21-undefined.js)
 - Day22. [undefined](http://codepen.io/kenjiSpecial/pen/zsGrB) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/22-undefined.js)
 - Day23. [undefined](http://codepen.io/kenjiSpecial/pen/BGhrm) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/22-undefined.js)
-
+- Day24. [undefined](http://codepen.io/kenjiSpecial/pen/aIhmB) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/1-illusion-of-life/23-undefined.js)
+- Day25. [undefined](http://codepen.io/kenjiSpecial/pen/kCoEq) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/2-numbers/24-number0.js)
+- Day26. [undefined](http://codepen.io/kenjiSpecial/pen/ysChe)
+- Day27. [undefined](http://codepen.io/kenjiSpecial/pen/dwypc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/26-undefined.js)
+- Day 28. [undefined](http://codepen.io/kenjiSpecial/pen/yLFwi)
 
 #### Referrence
 
