@@ -141,7 +141,9 @@ Object.size = function(obj) {
 };
 
 
-var str = "[ ";
+var str = "l" + kk;
+str += "=[ ";
+console.log(str);
 
 for(var i = 0; i < pts.length; i++){
 
@@ -149,15 +151,15 @@ for(var i = 0; i < pts.length; i++){
     var   curStr;
 
     if(number == 2){
-        curStr = "[" + pts[i].x / 200 + ", " + pts[i].y / 200 + "]";
+        curStr = "[" + pts[i].x / 200 + ", " + pts[i].y / 40 + "]";
     }
 
     if(number == 6){
-        curStr = "[" + pts[i].c1X/200 + ", " + pts[i].c1Y/200 + ", " + pts[i].c2X/200 + ", " + pts[i].c2Y/200 + "," +  pts[i].x / 200 + ", " + pts[i].y / 200  +"]";
+        curStr = "[" + pts[i].c1X/200 + ", " + pts[i].c1Y/40 + ", " + pts[i].c2X/200 + ", " + pts[i].c2Y/40 + "," +  pts[i].x / 200 + ", " + pts[i].y / 40  +"]";
     }
 
     if(number == 4){
-        curStr = "[" + pts[i].c1X/200 + ", " + pts[i].c1Y/200 + "," +  pts[i].x / 200 + ", " + pts[i].y / 200  +"]";
+        curStr = "[" + pts[i].c1X/200 + ", " + pts[i].c1Y/40 + "," +  pts[i].x / 200 + ", " + pts[i].y / 40  +"]";
     }
 
 
@@ -166,6 +168,4 @@ for(var i = 0; i < pts.length; i++){
 
 }
 
-str += " ]";
-
-console.log(str);
+str += " ];";
