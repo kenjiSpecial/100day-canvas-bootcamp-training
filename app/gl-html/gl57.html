@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <script id="shader-fs" type="x-shader/x-fragment">
+				#ifdef GL_ES
+				  precision highp float;
+				  #endif
+
+            //attribute vec2 a_position;
+            varying   vec4 vColor;
+
+    		void main(void) {
+    		 gl_FragColor = vec4(vColor);
+    		}
+
+    </script>
+
+    <script id="shader-vs" type="x-shader/x-vertex">
+    //attribute vec3 vertexPosition;
+    attribute vec2 a_position;
+    attribute vec4 a_color;
+
+    varying   vec4 vColor;
+
+    uniform vec2 u_resolution;
+
+   	void main(void) {
+   	    vColor = a_color;
+   	    vec2 curPosition = a_position + u_resolution/2.0;
+
+  		vec2 zeroToOne = curPosition / u_resolution;
+  		vec2 zeroToTwo = zeroToOne * 2.0;
+  		vec2 clipSpace = zeroToTwo - 1.0;
+  		gl_Position = vec4(clipSpace, 0, 1);
+  	}
+
+    </script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script src="../scripts/4-webgl/57-gl.js"></script>
+</body>
+</html>

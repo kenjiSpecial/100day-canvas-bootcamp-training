@@ -29,6 +29,7 @@ var canvas, gl,
     drawType,
     numLines = 80000;
 var targetArr = [];
+
 var randomTargetXArr = [], randomTargetYArr = [];
 drawType = 2;
 
@@ -49,16 +50,141 @@ function Target(rad){
 };
 
 Target.prototype = {
+    freqSpecial : 0.0,
     update : function() {
-        this.rotate_speed = .001 + Math.random() * 0.05;//Math.random(1) * 0.2 + 0.001;
+        this.rotate_speed = curObject.rotateSpeed + Math.random() * curObject.rotateSpeedRandom;//Math.random(1) * 0.2 + 0.001;
         //this.friction = Math.random(1) * 0.8 + 0.1;
-        this.speed = Math.random(1) * 0.2 + 0.03;
-        this.step = Math.random() * 0.1 + 0.2;
+        this.speed = Math.random(1) * curObject.speed + curObject.speed;
+        this.step = Math.random() * curObject.stepRandom + curObject.step;
 
-        this.freq = 1;
-        this.bold_rate = this.baseRad * (.8 + Math.random()*.3) ;
+        this.freq = curObject.freq + curObject.freqRandom * Math.random() + this.freqSpecial;
+        this.bold_rate = this.baseRad * (curObject.boldRate + Math.random()*curObject.boldRandom) ;
+        //console.log(this.)
     }
 }
+
+
+var curObject = {
+    rotateSpeed : 0.000,
+    rotateSpeedRandom: 0,
+    speed : 0.03,
+    speedRandom : 0.0,
+    step        : 0,
+    stepRandom  : 0.0,
+    freq : 0.01,
+    freqSpecial : 0.0,
+    freqRandom : 0.00,
+    boldRate    : 1.0,
+    boldRandom  :0,
+    update : function(){
+        onControllerChange(0);
+    }
+};
+
+var onControllerChange = function(value){
+
+    for(var ii = 0; ii < targetArr.length; ii++) {
+     targetArr[ii].update();
+
+    }
+};
+
+var gui = new dat.GUI();
+var rotSpeedController = gui.add(curObject, 'rotateSpeed', 0.000, 0.005);
+var rotSpeedRandomController = gui.add(curObject, 'rotateSpeedRandom', 0.00, 0.1);
+var stepController = gui.add(curObject, 'step', 0.0, 1);
+var stepRandomController = gui.add(curObject, 'stepRandom', 0.0, 1);
+var speedController = gui.add(curObject, 'speed', 0, 0.2);
+var speedRandomController = gui.add(curObject, 'speedRandom', 0, 0.6);
+var freqController = gui.add(curObject, 'freq', 0.00, 1);
+var freqRandomController = gui.add(curObject, 'freqRandom', 0.00,.1);
+var boldRateController = gui.add(curObject, "boldRate", 0, 1.0);
+var bolRandomController = gui.add(curObject, "boldRandom", 0, 1.0);
+var updateController = gui.add(curObject, 'update');
+
+rotSpeedController.onChange(onControllerChange);
+rotSpeedRandomController.onChange(onControllerChange);
+speedController.onChange(onControllerChange);
+speedRandomController.onChange(onControllerChange);
+boldRateController.onChange(onControllerChange);
+bolRandomController.onChange(onControllerChange);
+freqController.onChange(onControllerChange);
+freqRandomController.onChange(onControllerChange);
+stepController.onChange(onControllerChange);
+stepRandomController.onChange(onControllerChange);
+
+
+var incNum = 0.02;
+var incSign = +1;
+var count = 0;
+function onChangeTimer(){
+    curObject.step +=  incNum * incSign * (count + 1);
+    curObject.freq += incNum * incSign * (count + 1);
+
+    onControllerChange(0);
+
+    //count = count + count + 1;
+    count++;
+    if(count < 4) setTimeout(onChangeTimer, 500);
+    else setTimeout(backTimer, 500);
+
+}
+circleCount = 1;
+function backTimer(){
+
+    circleCount++;
+
+    if(circleCount > 7){
+        circleCount = 1;
+
+        targetArr = [];
+        var targetRad = 1.0;
+        var target = new Target(targetRad);
+        targetArr.push(target);
+
+    }else {
+
+        for (var ii = (circleCount - 1) * (circleCount - 1); ii < circleCount * circleCount; ii++) {
+            var targetRad = 1.0;
+            var target = new Target(targetRad);
+            targetArr.push(target);
+        }
+
+
+        var targetNumber = targetArr.length;
+        var kankaku = 2.0 / ( circleCount );
+
+        for (var xx = 0; xx < circleCount; xx++) {
+            for (var yy = 0; yy < circleCount; yy++) {
+                var num = xx + yy * circleCount;
+
+                targetArr[num].baseRad = .9 / circleCount;
+                targetArr[num].x = 1.0 - kankaku * (xx + .5);
+                targetArr[num].y = 1.0 - kankaku * (yy + .5);
+                targetArr[num].freqSpecial = (xx + yy) * 0.01;
+            }
+        }
+    }
+
+
+
+    count = 0;
+    curObject.step = 0.00; curObject.freq = 0.01;
+    onControllerChange(0);
+
+
+
+    setTimeout(onChangeTimer, 300);
+}
+
+/*
+rotSpeedController.onChange(function(value) {
+    // Fires on every change, drag, keypress, etc.
+    console.log("change")
+});
+*/
+
+
 
 
 
@@ -221,23 +347,25 @@ function drawScene() {
 // ===================================
 function setup() {
     setup00();
+
+    setTimeout(onChangeTimer, 300);
 }
 
 
 function draw() {
     /*
-    switch (drawType) {
-        case 0:
-            draw0();
-            break;
-        case 1:
-            draw1();
-            break;
-        case 2:
-            draw2();
-            break;
-    }
-    */
+     switch (drawType) {
+     case 0:
+     draw0();
+     break;
+     case 1:
+     draw1();
+     break;
+     case 2:
+     draw2();
+     break;
+     }
+     */
 
     draw00();
 }
@@ -261,22 +389,20 @@ function setup00() {
     //var minSize = Math.min(window.innerWidth, scale.innerHeight);
     var widthScale = window.innerWidth / window.innerHeight;
     var height = 340 * scaleFactor;
+
+
     var X_MAX_NUM = parseInt(window.innerWidth / height);
     var Y_MAX_NUM = parseInt(window.innerHeight / height);
     // 2 -> window.innerHeight
     // ? -> 50
-    var targetRad =  height / 2 / (2 * window.innerHeight) * 2;
-    var xPos, yPos;
-    for(var xx = -X_MAX_NUM + 1; xx < X_MAX_NUM; xx++){
-        for(var yy = -Y_MAX_NUM + 1; yy < Y_MAX_NUM; yy++){
-            //var rad = targetRad / Y_MAX_NUM;
-            var target = new Target(targetRad);
-            target.x = xx / X_MAX_NUM * widthScale;
-            target.y = yy / Y_MAX_NUM;
-            targetArr.push(target);
 
-        }
-    }
+    var targetRad =  1.0;
+    var xPos, yPos;
+    var target = new Target(targetRad);
+    target.x = 0;
+    target.y = 0;
+
+    targetArr.push(target);
 
     for(var ii = 0; ii < numLines; ii++){
         vertices.push( 0, 0, 1.83);
@@ -300,15 +426,13 @@ function draw00(){
     var tRad, tX, tY;
     var bp, px, py;
     var target;
+    var side = .5 / window.innerHeight;
     for(var ii = 0; ii < numLines * 2; ii += 2){
         bp = ii * 3;
 
-        // copy old positions
-        //vertices[bp] = vertices[bp + 3];
-        //vertices[bp + 1] = vertices[bp + 4];
+        target = targetArr[ (ii/2) % targetArr.length];
+        tRad   = Math.cos(target.rotate * 2.321 + target.freq * ii ) * target.bold_rate ;
 
-        target = targetArr[ii % targetArr.length];
-        tRad   = Math.cos(target.rotate * 2.321 + target.freq * ii ) * target.bold_rate + target.radius;
         tX = target.x + Math.cos(target.rotate + target.step * ii) * tRad;
         tY = target.y + Math.sin(target.rotate + target.step * ii) * tRad;
 
@@ -317,14 +441,15 @@ function draw00(){
         px = vertices[bp + 3];
         py = vertices[bp + 4];
 
-        px += (tX - px) * .1;
-        py += (tY - py) * .1;
+        px += (tX - px) * .3;
+        py += (tY - py) * .3;
 
         vertices[bp + 3] = px;
         vertices[bp + 4] = py;
 
-        vertices[bp ] = px-0.001;
-        vertices[bp + 1] = py-0.001;
+
+        vertices[bp ] = px-side;
+        vertices[bp + 1] = py-side;
 
     }
 
@@ -338,10 +463,10 @@ function draw00(){
 function timer() {
 
     /*
-    for(var ii = 0; ii < targetArr.length; ii++) {
-        targetArr[ii].update();
-    }
+     for(var ii = 0; ii < targetArr.length; ii++) {
+     targetArr[ii].update();
+     }
 
 
-    setTimeout(timer, 1500);*/
+     setTimeout(timer, 1500);*/
 }

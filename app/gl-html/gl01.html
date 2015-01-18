@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <title></title>
+    <script src="../bower_components/dat-gui/build/dat.gui.js"></script>
     <script id="shader-fs" type="x-shader/x-fragment">
 				#ifdef GL_ES
 				  precision highp float;
 				  #endif
+
+
     		void main(void) {
     		 gl_FragColor = vec4(0.4, 0.6, 0.75, 1.0);
     		}
@@ -27,6 +30,7 @@
 </head>
 <canvas id="c"></canvas>
 <body>
-<script src="../scripts/4-webgl/55-gl.js"></script>
+
+<script src="../scripts/4-webgl/56-gl.js"></script>
 </body>
 </html>

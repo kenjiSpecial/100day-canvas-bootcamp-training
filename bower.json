@@ -10,7 +10,9 @@
     "howler.js": "~1.1.25",
     "threejs": "*",
     "angular": "~1.2.25",
-    "stats.js": "*"
+    "stats.js": "*",
+    "dat-gui": "~0.5.0",
+    "backbone": "~1.1.2"
   },
   "devDependencies": {}
 }
