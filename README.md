@@ -1,7 +1,8 @@
 100day-canvas-bootcamp-training
 ===============================
-
 ### PROJECT URL: [http://codepen.io/kenjiSpecial/](http://codepen.io/kenjiSpecial/)
+![Image of project](https://raw.githubusercontent.com/kenjiSpecial/100day-canvas-bootcamp-training/master/images/screen01.png)
+![Image of project](https://raw.githubusercontent.com/kenjiSpecial/100day-canvas-bootcamp-training/master/images/screen02.png)
 
 This is my project for create one canvas animation work until I finish 100 work.
 
