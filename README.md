@@ -56,6 +56,45 @@ html : [index.html](https://github.com/kenjiSpecial/100day-canvas-bootcamp-train
 - Day31. [Move Mouse](http://codepen.io/kenjiSpecial/pen/AJxDc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/30-mouse-boid.js)
 - Day32. [Colorful boids.](http://codepen.io/kenjiSpecial/pen/DerBc) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/99-hobby/32-boid-collection.js)
 - Day33. [undefined](http://codepen.io/kenjiSpecial/pen/atAoE) | [js code](https://github.com/kenjiSpecial/100day-canvas-bootcamp-training/blob/master/app/scripts/3-algorithm/35-undefined.js)
+- Day34. [undefined](http://codepen.io/kenjiSpecial/pen/qBbEv) 
+- Day35. [undefined](http://codepen.io/kenjiSpecial/pen/ulBCG)
+- Day35. [undefined](http://codepen.io/kenjiSpecial/pen/bzGkJ)
+- Day36. [undefined](http://codepen.io/kenjiSpecial/pen/vrfuJ)
+- Day37. [undefined](http://codepen.io/kenjiSpecial/pen/qimgz)
+- Day38. [Loop](http://codepen.io/kenjiSpecial/pen/vIHFG)
+- Day39. [Loop](http://codepen.io/kenjiSpecial/pen/FlcaB)
+- Day40. [Loop](http://codepen.io/kenjiSpecial/pen/enrbq)
+
+### Day 41 - Day 50
+- Day41. [Loop](http://codepen.io/kenjiSpecial/pen/agGIs)
+- Day42. [Loop](http://codepen.io/kenjiSpecial/pen/AwJjt)
+- Day43. [Loop](http://codepen.io/kenjiSpecial/pen/saAjL)
+- Day44. [Clock with gray scott model.](http://codepen.io/kenjiSpecial/pen/AExmF)
+- Day45. [Loop](http://codepen.io/kenjiSpecial/pen/DpCjF)
+- Day46. [undefined](http://codepen.io/kenjiSpecial/pen/FpvCj)
+- Day47. [Clock with shader](http://codepen.io/kenjiSpecial/pen/IFCzK)
+- Day48. [undefined](http://codepen.io/kenjiSpecial/pen/pwIdm)
+- Day49. [Typography Animation.](http://codepen.io/kenjiSpecial/pen/JqGdE)
+- Day50. [awwwards logo animation.](http://codepen.io/kenjiSpecial/pen/GsLwn)
+
+### Day 51 - Day 60
+- Day51. [Color](http://codepen.io/kenjiSpecial/pen/azOXEa)
+- Day52. [Image Slider](http://codepen.io/kenjiSpecial/pen/EaVxdx)
+- Day53. [Image Gallery.](http://codepen.io/kenjiSpecial/pen/YPyyVq)
+- Day54. [WebGL Particle Animation.](http://codepen.io/kenjiSpecial/pen/vELOrM)
+- Day55. [WebGL Particle Animation#2.](http://codepen.io/kenjiSpecial/pen/yyeaKm)
+- Day56. [WebGL Particle Animation#3.](http://codepen.io/kenjiSpecial/pen/zxrRZz)
+- Day57. [Hello with three.js.](http://codepen.io/kenjiSpecial/pen/jEWorO)
+- Day58. [Particle Clock.](http://codepen.io/kenjiSpecial/pen/gbrvpK)
+- Day59. [WebGL Particle Animation#4.](http://codepen.io/kenjiSpecial/pen/EaKLyB)
+- Day60. [WebGL Animation.](http://codepen.io/kenjiSpecial/pen/WbwJZy)
+
+
+### Day 60 - Day 70
+- Day61. [Particle Animation](http://codepen.io/kenjiSpecial/pen/ogzdxO)
+- Day62. [Shader experience](http://codepen.io/kenjiSpecial/pen/ByWxGy)
+- Day63. [Shader experience](http://codepen.io/kenjiSpecial/pen/YPyyVq)
+
 
 
 #### Referrence
